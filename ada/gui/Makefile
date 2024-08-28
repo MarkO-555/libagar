@@ -19,6 +19,7 @@ SRCS=		ag_drivers.c \
 		agar-box.adb \
 		agar-button.adb \
 		agar-checkbox.adb \
+		agar-combo.adb \
 		agar-init_gui.adb \
 		agar-input_device.ads \
 		agar-surface.adb \

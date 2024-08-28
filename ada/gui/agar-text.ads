@@ -121,6 +121,12 @@ package Agar.Text is
   subtype Font_Points is C.C_float;
   type Font_Points_Access is access all Font_Points with Convention => C;
 
+  ------------------------------------------
+  -- Weight / Style / Width Variant flags --
+  ------------------------------------------
+  subtype Font_Flags is C.unsigned;
+  type Font_Flags_Access is access all Font_Flags with Convention => C;
+
   -----------------------------
   -- Agar font specification --
   -----------------------------

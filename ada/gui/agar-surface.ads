@@ -78,6 +78,9 @@ package Agar.Surface is
   type Color_Access is access all AG_Color with Convention => C;
   subtype Color_not_null_Access is not null Color_Access;
 
+  type AG_Color_Access is access all AG_Color with Convention => C;
+  subtype AG_Color_not_null_Access is not null AG_Color_Access;
+
   --------------------------
   -- Native Color in HSVA --
   --------------------------

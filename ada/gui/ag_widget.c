@@ -15,6 +15,12 @@ AG_Object *ag_button_to_object(AG_Button *p) { AG_OBJECT_ISA(p, "AG_Widget:AG_Bu
 AG_Widget *ag_checkbox_to_widget(AG_Checkbox *p) { AG_OBJECT_ISA(p, "AG_Widget:AG_Checkbox:*"); return (AG_Widget *)p; }
 AG_Object *ag_checkbox_to_object(AG_Checkbox *p) { AG_OBJECT_ISA(p, "AG_Widget:AG_Checkbox:*"); return (AG_Object *)p; }
 
+AG_Widget *ag_combo_to_widget(AG_Combo *p) { AG_OBJECT_ISA(p, "AG_Widget:AG_Combo:*"); return (AG_Widget *)p; }
+AG_Object *ag_combo_to_object(AG_Combo *p) { AG_OBJECT_ISA(p, "AG_Widget:AG_Combo:*"); return (AG_Object *)p; }
+
+AG_Widget *ag_tlist_to_widget(AG_Tlist *p) { AG_OBJECT_ISA(p, "AG_Widget:AG_Tlist:*"); return (AG_Widget *)p; }
+AG_Object *ag_tlist_to_object(AG_Tlist *p) { AG_OBJECT_ISA(p, "AG_Widget:AG_Tlist:*"); return (AG_Object *)p; }
+
 char *
 ag_window_get_caption(AG_Window *win)
 {

@@ -26,12 +26,12 @@ package Agar.Checkbox is
   use type C.unsigned;
 
   -- Flags --
-  AG_CHECKBOX_HFILL       : constant C.unsigned := 16#00_01#;
-  AG_CHECKBOX_VFILL       : constant C.unsigned := 16#00_02#;
-  AG_CHECKBOX_SET         : constant C.unsigned := 16#00_04#;
-  AG_CHECKBOX_INVERT      : constant C.unsigned := 16#00_08#;
-  AG_CHECKBOX_EXCL        : constant C.unsigned := 16#00_10#;
-  AG_CHECKBOX_EXPAND      : constant C.unsigned := AG_CHECKBOX_HFILL or AG_CHECKBOX_VFILL;
+  AG_CHECKBOX_HFILL  : constant C.unsigned := 16#00_01#;
+  AG_CHECKBOX_VFILL  : constant C.unsigned := 16#00_02#;
+  AG_CHECKBOX_SET    : constant C.unsigned := 16#00_04#;
+  AG_CHECKBOX_INVERT : constant C.unsigned := 16#00_08#;
+  AG_CHECKBOX_EXCL   : constant C.unsigned := 16#00_10#;
+  AG_CHECKBOX_EXPAND : constant C.unsigned := AG_CHECKBOX_HFILL or AG_CHECKBOX_VFILL;
 
   -----------------------------------
   -- Agar Checkbox Widget Instance --

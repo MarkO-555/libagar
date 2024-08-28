@@ -816,6 +816,8 @@ package Agar.Widget is
      HOVER_STATE);                      -- Cursor is over (#hover)
   for Widget_State'Size use C.int'Size;
 
+  WIDGET_NSTATES : constant C.unsigned := 4;
+
   type Widget_Color is
     (FG_COLOR,            -- Foreground primary      ("color")
      BG_COLOR,            -- Background primary      ("background-color")
