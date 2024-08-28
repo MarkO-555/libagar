@@ -29,8 +29,9 @@ syn case match
 syn iskeyword @,48-57,_,192-255,-
 
 " Standard Agar Widget classes.
+syn keyword cssTagName Defaults
 syn keyword cssTagName AG_Box AG_Button AG_Checkbox AG_Combo AG_Console
-syn keyword cssTagName AG_Box AG_DirDlg AG_Editable AG_FileDlg AG_Fixed
+syn keyword cssTagName AG_DirDlg AG_Editable AG_FileDlg AG_Fixed
 syn keyword cssTagName AG_FixedPlotter AG_FontSelector AG_GLView AG_Graph
 syn keyword cssTagName AG_HSVPal AG_Icon AG_Label AG_Menu AG_MenuView
 syn keyword cssTagName AG_MFSpinButton AG_MPane AG_MSpinButton AG_Notebook
@@ -110,9 +111,9 @@ syn region cssMathGroup contained matchgroup=cssMathParens start="(" end=")" con
 syn region cssFunction contained matchgroup=cssFunctionName start="\<\(rgb\|rgb16\|hsv\)(" end=")" oneline contains=cssValueInteger,cssValueNumber,cssFunctionComma
 syn match cssFunctionComma contained ","
 
-syn keyword cssCommonAttr contained auto none inherit all default normal
+syn keyword cssCommonAttr contained auto none inherit all default normal font-height
 
-syn keyword cssBoxProp contained padding spacing margin
+syn keyword cssBoxProp contained padding spacing margin width
 
 syn match cssColorProp contained "\<\(color\|background-color\|text-color\|line-color\|high-color\|low-color\|selection-color\)\(#disabled\|#focused\|#hover\|\)\>"
 
@@ -197,6 +198,7 @@ hi def link cssBorderProp cssProp
 hi def link cssBoxProp cssProp
 hi def link cssColorProp cssProp
 hi def link cssFontProp cssProp
+hi def link cssWidthProp cssProp
 hi def link cssListProp cssProp
 hi def link cssTextProp cssProp
 
