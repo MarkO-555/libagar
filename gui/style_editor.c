@@ -761,6 +761,7 @@ AG_StyleEditor(AG_Window *_Nonnull tgt)
 		    sizeof(agStyleEditorFilter));
 		AG_TextboxSetPlaceholderS(tb, _("Filter widgets..."));
 		AG_SetEvent(tb, "textbox-postchg", FilterChanged, "%p", tl);
+		AG_WidgetFocus(tb);
 
 		AG_ObjectAttach(pane->div[0], tl);
 
@@ -789,7 +790,6 @@ AG_StyleEditor(AG_Window *_Nonnull tgt)
 	AG_WindowSetGeometryAligned(win, AG_WINDOW_MR, 900, 500);
 	AG_WindowSetPosition(win, AG_WINDOW_BR, 1);
 	AG_WindowSetCloseAction(win, AG_WINDOW_DETACH);
-	AG_WidgetFocus(tl);
 	return (win);
 }
 
