@@ -159,7 +159,6 @@ void AG_TlistSetItemHeight(AG_Tlist *_Nonnull, int);
 void AG_TlistSetIconWidth(AG_Tlist *_Nonnull, int);
 void AG_TlistSetRefresh(AG_Tlist *_Nonnull, int);
 void AG_TlistUniq(AG_Tlist *_Nonnull);
-void AG_TlistClear(AG_Tlist *_Nonnull);
 void AG_TlistRestore(AG_Tlist *_Nonnull);
 void AG_TlistBegin(AG_Tlist *_Nonnull);
 void AG_TlistEnd(AG_Tlist *_Nonnull);
