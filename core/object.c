@@ -2051,12 +2051,12 @@ AG_ObjectGenName(void *p, AG_ObjectClass *C, char *name, AG_Size len)
 	if (len < 4) {
 		return;
 	}
-	name[0] = tolower(ccBase[0]);
+	name[0] = tolower((int)ccBase[0]);
 	len--;
 	for (cc = &ccBase[1], dBase = &name[1];
 	    *cc != '\0' && len > 0;
 	     cc++, dBase++) {
-		*dBase = tolower(*cc);
+		*dBase = tolower((int)*cc);
 		len--;
 	}
 	*dBase = '\0';

@@ -604,7 +604,7 @@ AG_FetchFont(const char *face, float fontSize, Uint flags)
 			for (pFace=face, pDst=name;
 			    *pFace != '\0' && pDst < &name[sizeof(name)-1];
 			     pFace++) {
-				*pDst = tolower(*pFace);
+				*pDst = tolower((int)*pFace);
 				pDst++;
 			}
 			*pDst = '\0';
