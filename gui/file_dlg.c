@@ -41,10 +41,6 @@
 #include <agar/gui/separator.h>
 #include <agar/gui/icons.h>
 
-#ifdef __NetBSD__
-#define _NETBSD_SOURCE
-#endif
-
 #include <stdarg.h>
 #include <string.h>
 #include <ctype.h>

@@ -8501,6 +8501,9 @@ case "${host}" in
 *-*-darwin*)
 CFLAGS="$CFLAGS -D_DARWIN_C_SOURCE"
 	;;
+*-*-netbsd*)
+CFLAGS="$CFLAGS -D_NETBSD_SOURCE"
+	;;
 esac
 if [ "${enable_warnings}" = 'yes' ]
  then

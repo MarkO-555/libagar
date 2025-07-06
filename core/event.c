@@ -38,9 +38,6 @@
 #include <agar/config/have_select.h>
 
 #if defined(HAVE_KQUEUE)
-# ifdef __NetBSD__
-#   define _NETBSD_SOURCE
-# endif
 # include <sys/types.h>
 # include <sys/event.h>
 # include <unistd.h>

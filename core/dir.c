@@ -76,14 +76,6 @@
 # endif
 
 # include <dirent.h>
-
-# ifdef _AGAR_DEFINED_NETBSD_SOURCE
-#  undef _NETBSD_SOURCE
-# endif
-# ifdef _AGAR_DEFINED_DARWIN_C_SOURCE
-#  undef _DARWIN_C_SOURCE
-# endif
-
 # include <unistd.h>
 #endif /* !_WIN32 */
 

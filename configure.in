@@ -339,6 +339,9 @@ case "${host}" in
 *-*-darwin*)
 	c_define(_DARWIN_C_SOURCE)
 	;;
+*-*-netbsd*)
+	c_define(_NETBSD_SOURCE)
+	;;
 esac
 
 if [ "${enable_warnings}" = 'yes' ]; then

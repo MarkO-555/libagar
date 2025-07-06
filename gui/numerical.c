@@ -34,10 +34,6 @@
 #include <agar/gui/numerical.h>
 #include <agar/gui/primitive.h>
 
-#ifdef __NetBSD__
-#define _NETBSD_SOURCE
-#endif
-
 #include <string.h>
 
 #include <agar/config/_mk_have_strtold.h>
