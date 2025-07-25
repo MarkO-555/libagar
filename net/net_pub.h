@@ -5,6 +5,8 @@
 
 #include <agar/core.h>
 
+#include <stdio.h>
+
 #include <agar/net/net.h>
 #include <agar/net/web.h>
 
