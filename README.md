@@ -1,4 +1,4 @@
-![Agar](img/agar-500.png)
+![Agar](img/agar-eightbit.png)
 
 ### What is it?
 
