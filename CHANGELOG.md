@@ -1,19 +1,44 @@
 # Changelog
 All notable changes to Agar will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.7.1] - Unreleased
+## [1.7.1] - 2025-07-30
 ### Added
+- An awesome new Agar logo by @eightbit (`img/agar-eightbit.png`). Thank you so much!
 - Added [cmake](https://cmake.org) support.
 - New functions [**AG_InitVideoSDL2**](https://libagar.org/man3/AG_InitVideoSDL2) and [**AG_SetVideoSurfaceSDL2**](https://libagar.org/man3/AG_SetVideoSurfaceSDL2) for integrating with an existing SDL2 display context. Thanks Brigham Keys!
+- [**AG_FileDlg**](https://libagar.org/man3/AG_FileDlg): Add "Any File" type.
 - [**AG_Tlist**](https://libagar.org/man3/AG_Tlist): New function `AG_TlistCopy()`. Copy all items from a source to a destination `AG_Tlist`.
+- [**AG_Combo**](https://libagar.org/man3/AG_Combo): New constructor `AG_ComboNewFn()`. Sets a `combo-expanded` handler.
 - [**AG_Combo**](https://libagar.org/man3/AG_Combo): New member `nVisItems`. Set the number of items to show by default in expansions.
 - [**AG_Checkbox**](https://libagar.org/man3/AG_Checkbox): New functions `AG_CheckboxText()` and `AG_CheckboxTextS()` to update the text label.
+- Tweak the default color scheme. Document style defaults as a comment block in `gui/style.css`.
+- New Ada bindings for the `Window`, `Box`, `Button`, `Checkbox` and `Combo` widget classes. Updated `ada/gui/demo`.
+
+### Removed
+- [**AG_Db**](https://libagar.org/man3/AG_Db): Remove support for DB5.
+- [**AG_Window**](https://libagar.org/man3/AG_Window): Remove an unnecessary counter variable in `SizeAllocate()`.
+
+### Changed
+- Small cosmetic changes to the default color scheme. Set default font size back to 14pt.
+- [**AG_Titlebar**](https://libagar.org/man3/AG_Titlebar): Enable the `AG_BUTTON_EXCL` optimization on titlebar buttons.
+- [**AG_Combo**](https://libagar.org/man3/AG_Combo): Allow the dropdown list to be populated by a `combo-expanded` handler.
+- [**AG_UCombo**](https://libagar.org/man3/AG_UCombo): Allow the dropdown list to be populated by a `ucombo-expanded` handler.
 
 ### Fixed
 - [**AG_Combo**](https://libagar.org/man3/AG_Combo): Make it again possible to statically initialize `list` before `combo-expanded`. Restores compatibility pre-1.6. Thanks Wally!
-- [**AG_FileDlg**](https://libagar.org/man3/AG_FileDlg): Add "Any File" type. Fix widget geometries not updating when switching to a different Type filter.
-- SDL2 drivers: Require at least version 2.0.22 of SDL2 (for `SDL_HINT_MOUSE_AUTO_CAPTURE`).
+- [**AG_FileDlg**](https://libagar.org/man3/AG_FileDlg): Fix widget geometries not updating when switching to a different Type filter.
+- [**AG_FileDlg**](https://libagar.org/man3/AG_FileDlg): Fix compilation where `GLOB_TILDE` is unavailable.
+- SDL2 drivers: Require at least version 2.0.22 of SDL2 (`SDL_HINT_MOUSE_AUTO_CAPTURE` is necessary for best user experience).
 - [**AG_ProgressBar**](https://libagar.org/man3/AG_ProgressBar): Make `padding` work as expected in progress bar. Thanks scaramacai!
+- [**cocoa**](https://libagar.org/man3/AG_DriverCocoa): Fix a compilation error.
+- [**glx**](https://libagar.org/man3/AG_DriverGLX): Fix a keyboard handling error. Don't pass `KeyRelease` events to `XwcLookupString()`. Fixes issue #74. Thanks @tsesani and @scaramacai!
+- [**glx**](https://libagar.org/man3/AG_DriverGLX): Introduce the `no-im` (disable input methods) driver option.
+- [**MAP**](https://libagar.org/man3/MAP): Fix a crash when attempting to create an object if `pLibsRoot` is NULL.
+- [**AG_Web**](https://libagar.org/man3/AG_Web): Fix inline compilation problem due to a typo in `net/web.h`.
+- On Darwin platforms, build with `_DARWIN_C_SOURCE` globally. Fixes issue #77. Thanks @kwhr0!
+- On FreeBSD check for availability of `CLOCK_SECOND` in addition to `HAVE_CLOCK_GETTIME`.
+- Test for the `dirfd()` function at compilation.
+- Fix integer conversion warnings related to `isspace()`, `isdigit()`, etc.
 
 ## [1.7.0] - 2023-05-02
 ### Added
