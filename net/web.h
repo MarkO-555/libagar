@@ -890,7 +890,7 @@ WEB_Write(WEB_Query *_Nonnull q, const void *_Nonnull data, AG_Size len)
 {
 	if (q->dataLen+len > q->dataSize) {
 		q->dataSize += len+WEB_DATA_BUFSIZE;
-		q->data = Realloc(q->data, q->dataSize);
+		q->data = AG_Realloc(q->data, q->dataSize);
 	}
 	memcpy(&q->data[q->dataLen], data, len);
 	q->dataLen += len;
